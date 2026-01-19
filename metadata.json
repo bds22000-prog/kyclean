@@ -1,0 +1,7 @@
+{
+  "name": "260119 모든시스템 작업완료 1346",
+  "description": "Integrated Management System for Kyzylorda Landfill, featuring GPS attendance, waste tracking, recycling revenue, and finance with dual Korean/Russian support.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

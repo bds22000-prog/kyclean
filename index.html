@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kyzylorda Landfill IMS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter (for Numbers/English) and Noto Sans KR (for Korean) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        /* Inter handles Numbers/Latin, Noto Sans KR handles Korean fallback */
+        font-family: 'Inter', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background-color: #eef6ff;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      .font-digital {
+        font-family: 'Orbitron', sans-serif;
+      }
+
+      /* Explicitly force Inter for numeric displays with tabular features */
+      .tabular-nums {
+        font-family: 'Inter', sans-serif;
+        font-variant-numeric: tabular-nums;
+      }
+      
+      /* E-Count ERP Style Printing Logic */
+      @media print {
+        @page {
+          size: A4;
+          margin: 10mm;
+        }
+        body {
+          background-color: white !important;
+          -webkit-print-color-adjust: exact;
+        }
+        aside, button, header, .no-print {
+          display: none !important;
+        }
+        main {
+          margin: 0 !important;
+          padding: 0 !important;
+          width: 100% !important;
+        }
+      }
+    </style>
+    <!-- Google API Client Libraries -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://apis.google.com/js/api.js" async defer></script>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
